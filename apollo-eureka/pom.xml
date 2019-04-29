@@ -9,8 +9,10 @@
     </parent>
     <artifactId>apollo-eureka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
     <name>apollo-eureka</name>
-    <description>apollo eureka project for Spring Boot</description>
+    <description>apollo服务注册中心，基础eureka</description>
 
     <dependencies>
         <dependency>
