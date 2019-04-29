@@ -4,9 +4,26 @@ server:
 spring:
   application:
     name: apollo-upms
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/apollo_cloud?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+
 eureka:
   instance:
     prefer-ip-address: true
   client:
     service-url:
       defalutZone: http://localhost:8761/eureka/
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: ignored
+      table-underline: true
+      logic-delete-value: 1
+      logic-not-delete-value: 0
